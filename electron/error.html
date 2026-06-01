@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { background: #0a0a0f; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Segoe UI', sans-serif; }
+    .error { text-align: center; color: #ef4444; }
+    .error h2 { margin-bottom: 10px; }
+    .error p { color: #94a3b8; font-size: 14px; max-width: 600px; word-wrap: break-word; margin: 0 auto; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <div class="error">
+    <h2>حدث خطأ أثناء تحميل النظام</h2>
+    <p id="error-msg">رجاءً التواصل مع الدعم الفني.</p>
+  </div>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const err = urlParams.get('msg');
+    if (err) {
+      document.getElementById('error-msg').innerText = err;
+    }
+  </script>
+</body>
+</html>

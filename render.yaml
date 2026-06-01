@@ -1,0 +1,11 @@
+render:
+  - type: web
+    name: kareem-hussien-system
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: node server/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
